@@ -3,7 +3,7 @@ import "./template.css";
 
 // Initialize list array
 
-let todoList = [
+const todoList = [
   {
     description: '',
     completed: false,
@@ -11,42 +11,79 @@ let todoList = [
   },]
 
 class Todo_List {
-  constructor(li)
+  constructor(li) {
     this.ulElement = li;
-}
+  }
 
-function addTask() {
-  const todoInput = document.querySelector('#taskInput').value;
-  const taskObject = {
-    description: todoInput,
-    completed: false,
-    index: todoList.length,
+  addTask() {
+    const todoInput = document.querySelector('#taskInput').value;
+    const taskObject = {
+      description: todoInput,
+      completed: false,
+      index: todoList.length,
     }
-}
-
-function check(a) {
-
-}
-
-function deleteElenent(b) {
   
+    todoList.unshift(todoObject);
+    this.generateHTML();
+    document.querySelector("#taskInput").value = '';
+
+  }
+
+  check(a) {
+    const selectedTodoIndex =
+      todoList.findIndex((item) => item.index == a);
+    condition ? exprIfTrue : exprIfFalse;
+    this.generateHTML()
+  }
+
+  deleteElement(b) {
+  
+  }
+
+  dragNdrop(c) {
+
+  }
+
+  generateHTML(details) {
+    this.ulElement.innerHTML = "";
+
+    todoList.forEach((object_item) => {
+
+      const liElement = document.createElement("li");
+      const delBtn = document.createElement("i");
+
+      liElement.innerText = object_item.description;
+      liElement.setAttribute("data-id", object_item.index);
+
+      delBtn.setAttribute("data-id", object_item.index);
+      delBtn.classList.add("far", "fa-trash-alt")
+
+      liElement.appendChild(delBtn);
+
+      delBtn.addEventListener("click", function (e) {
+        const deleteId = e.target.getAttribute("data - id");
+        todoList.deleteElement(deleteId);
+      })
+
+      liElement.addEventListener("click", function (e) {
+        const selectedId = e.target.getAttribute("data - id");
+        todoList.check(selectedId);
+      })
+
+      if (object_item.completed) {
+        liElement.classList.add("checked");
+      }
+
+      this.ulElement.appendChild(liElement);
+
+    })
+  }
 }
 
-function dragNdrop(c) {
+  const listElements = document.querySelector('.to-do-list');
 
-}
-
-function generateHTML(details) {
-  const template = `
-  <li>${description}</li>
-  `;
-  return template;
-}
-
-const listElements = document.querySelector('.to-do-list');
-
-myTodoList = new Todo_List(listSection);
-document.querySelector("#taskInput").addEventListener("click"), function () {
-  myTodoList.addTask()
-};
+  myTodoList = new Todo_List(listSection);
+document.querySelector("#taskInput").addEventListener("click"), function() {
+    myTodoList.addTask()
+  };
 
