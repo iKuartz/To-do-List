@@ -1,13 +1,19 @@
 import _ from 'lodash';
 import "./template.css";
 
-function component() {
-  const element = document.createElement('div');
+// Initialize list array
 
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+let todoList = [
+  {
+    description: '',
+    completed: false,
+    index: 0,
+  },]
 
-  return element;
+const listElements = document.querySelector('.to-do-list');
+
+function generateHTML(details) {
+  const template = `
+  `;
+  return template;
 }
-
-document.body.appendChild(component());
