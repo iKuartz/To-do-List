@@ -1,12 +1,40 @@
-import _ from 'lodash';
+import "./template.css";
 
-function component() {
-  const element = document.createElement('div');
+// Initialize list array
 
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+const todoList = [
+  {
+    description: 'Wash Car',
+    completed: false,
+    index: 0,
+  },
+  {
+    description: 'Clean Airplane',
+    completed: false,
+    index: 1,
+  },
+  {
+    description: 'Tiden Boat',
+    completed: false,
+    index: 2,
+  },
+  {
+    description: 'Organize Motorcycle',
+    completed: false,
+    index: 3,
+  },
+  {
+    description: 'Fix House',
+    completed: false,
+    index: 4,
+  },
+]
 
-  return element;
-}
+const list = document.querySelector('.todo-list')
 
-document.body.appendChild(component());
+const createList = () => {
+  for (let i = 0; i < todoList.length; i += 1) {
+  list.innerHTML+=`<li><input type="checkbox"><p>${todoList[i].description}<p><i class="fa fa-ellipsis-v" aria-hidden="true" ></i></li>`
+  
+}return list};
+createList();
