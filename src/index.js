@@ -37,7 +37,11 @@ class Todo_List {
   }
 
   deleteElement(b) {
-  
+    const selectedDelIndex =
+      todoList.findIndex((item) => item.index == b);
+    
+    todoList.splice(selectedDelIndex, 1);
+    this.generateHTML();
   }
 
   dragNdrop(c) {
@@ -54,6 +58,7 @@ class Todo_List {
 
       liElement.innerText = object_item.description;
       liElement.setAttribute("data-id", object_item.index);
+      liElement.classList.add()
 
       delBtn.setAttribute("data-id", object_item.index);
       delBtn.classList.add("far", "fa-trash-alt")
@@ -82,8 +87,8 @@ class Todo_List {
 
   const listElements = document.querySelector('.to-do-list');
 
-  myTodoList = new Todo_List(listSection);
+  todoList = new Todo_List(listSection);
 document.querySelector("#taskInput").addEventListener("click"), function() {
-    myTodoList.addTask()
+    todoList.addTask()
   };
 

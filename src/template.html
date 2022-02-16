@@ -7,12 +7,16 @@
     <title>To Do List</title>
 </head>
 <body>
-    <div>
+    <div class="list-container">
         <h1>Today's To Do</h1>
         <input id= "taskInput" type="text" placeholder="Add to your list">
-    </div>
-    <ul class="todo-list">
+        <ul 
+        class="todo-list"
+        ondragover="onDragOver(event)"
+        ondrop="onDrop(event)"
+        >
 
-    </ul>>
+        </ul>
+    </div>
 </body>
 </html>
