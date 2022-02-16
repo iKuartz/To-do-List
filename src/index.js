@@ -1,93 +1,39 @@
-import _ from 'lodash';
 import "./template.css";
 
 // Initialize list array
 
 const todoList = [
   {
-    description: '',
+    description: 'Wash Car',
     completed: false,
     index: 0,
-  },]
+  },
+  {
+    description: 'Clean Airplane',
+    completed: false,
+    index: 1,
+  },
+  {
+    description: 'Tiden Boat',
+    completed: false,
+    index: 2,
+  },
+  {
+    description: 'Organize Motorcycle',
+    completed: false,
+    index: 3,
+  },
+  {
+    description: 'Fix House',
+    completed: false,
+    index: 4,
+  },
+]
 
-class Todo_List {
-  constructor(li) {
-    this.ulElement = li;
-  }
+const list = document.querySelector('.todo-list')
 
-  addTask() {
-    const todoInput = document.querySelector('#taskInput').value;
-    const taskObject = {
-      description: todoInput,
-      completed: false,
-      index: todoList.length,
-    }
-  
-    todoList.unshift(todoObject);
-    this.generateHTML();
-    document.querySelector("#taskInput").value = '';
-
-  }
-
-  check(a) {
-    const selectedTodoIndex =
-      todoList.findIndex((item) => item.index == a);
-    condition ? exprIfTrue : exprIfFalse;
-    this.generateHTML()
-  }
-
-  deleteElement(b) {
-    const selectedDelIndex =
-      todoList.findIndex((item) => item.index == b);
-    
-    todoList.splice(selectedDelIndex, 1);
-    this.generateHTML();
-  }
-
-  dragNdrop(c) {
-
-  }
-
-  generateHTML(details) {
-    this.ulElement.innerHTML = "";
-
-    todoList.forEach((object_item) => {
-
-      const liElement = document.createElement("li");
-      const delBtn = document.createElement("i");
-
-      liElement.innerText = object_item.description;
-      liElement.setAttribute("data-id", object_item.index);
-      liElement.classList.add()
-
-      delBtn.setAttribute("data-id", object_item.index);
-      delBtn.classList.add("far", "fa-trash-alt")
-
-      liElement.appendChild(delBtn);
-
-      delBtn.addEventListener("click", function (e) {
-        const deleteId = e.target.getAttribute("data - id");
-        todoList.deleteElement(deleteId);
-      })
-
-      liElement.addEventListener("click", function (e) {
-        const selectedId = e.target.getAttribute("data - id");
-        todoList.check(selectedId);
-      })
-
-      if (object_item.completed) {
-        liElement.classList.add("checked");
-      }
-
-      this.ulElement.appendChild(liElement);
-
-    })
-  }
+const createList = () => {
+  todoList.forEach((e) => {
+    <li><input type='checkbox'><p>{ }</p><i></i></li> 
+  });
 }
-
-  const listElements = document.querySelector('.to-do-list');
-
-  todoList = new Todo_List(listSection);
-document.querySelector("#taskInput").addEventListener("click"), function() {
-    todoList.addTask()
-  };
