@@ -91,4 +91,3 @@ class Todo_List {
 document.querySelector("#taskInput").addEventListener("click"), function() {
     todoList.addTask()
   };
-

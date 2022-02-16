@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,12 +7,47 @@
     <title>To Do List</title>
 <script defer src="index_bundle.js"></script></head>
 <body>
-    <div>
+    <div class="list-container">
         <h1>Today's To Do</h1>
         <input id= "taskInput" type="text" placeholder="Add to your list">
-    </div>
-    <ul class="todo-list">
+        <ul 
+        class="todo-list"
+        ondragover="onDragOver(event)"
+        ondrop="onDrop(event)"
+        >
 
-    </ul>>
+        </ul>
+    </div>
 </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
+    <title>Todo List</title>
+</head>
+
+<body>
+    <div class="todo-lists">
+        <div class="todo-header">
+            <h2 class="todo-list-title">Today's To Do</h2>
+            <button class="btn btn-refresh">
+                <i class="bi bi-arrow-repeat"></i>
+            </button>
+        </div>
+        <form>
+            <input type="text" id="todo-input" placeholder="Add to your list" />
+        </form>
+
+        <div class="todo-lists-holder"></div>
+
+        <button class="btn btn-clear" type="button">Clear all completed</button>
+    </div>
+</body>
+
 </html>
