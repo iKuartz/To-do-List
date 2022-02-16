@@ -33,7 +33,8 @@ const todoList = [
 const list = document.querySelector('.todo-list')
 
 const createList = () => {
-  todoList.forEach((e) => {
-    <li><input type='checkbox'><p>{ }</p><i></i></li> 
-  });
-}
+  for (let i = 0; i < todoList.length; i += 1) {
+  list.innerHTML+=`<li><input type="checkbox"><p>${todoList[i].description}<p><i class="fa fa-ellipsis-v" aria-hidden="true" ></i></li>`
+  
+}return list};
+createList();
