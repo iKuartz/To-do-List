@@ -9,8 +9,6 @@ export default function deleteTodo(array) {
         
 
 };
-
-    console.log(array)
     
     localStorage.setItem('todoList', JSON.stringify(array));
 

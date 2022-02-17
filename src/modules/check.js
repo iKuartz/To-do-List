@@ -11,5 +11,5 @@ export default function checkTodo(selectedId) {
     todoList[selectedId].completed = check
 
     localStorage.setItem('todoList', JSON.stringify(todoList));
-console.log(todoList)
+
 }
