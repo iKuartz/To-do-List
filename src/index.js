@@ -1,9 +1,9 @@
 import "./template.css";
 
 // Initialize list array
-const todoList = []
+let todoList = []
 
-export { todoList };
+export default { todoList };
 
 import addTodo from "./modules/add.js"
 import checkTodo from "./modules/check.js"
