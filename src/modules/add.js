@@ -3,7 +3,7 @@ export default function addTodo() {
   const todoText = document.querySelector("#taskInput").value;
 
   if (todoText === "") {
-    alert("Please enter a task");
+    window.confirm("Please enter a task");
   } else {
     const todoObject = {
       description: todoText,

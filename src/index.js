@@ -43,10 +43,9 @@ document.querySelector("#taskInput").addEventListener("keydown", function (e) {
 });
 
  
-document.querySelector(".delete-tasks").addEventListener("click", function (a) {
+document.querySelector(".delete-tasks").addEventListener("click", function () {
   todoList = deleteTodo(todoList)
   createList()
-  console.log(todoList)
   }
  );
 ;
