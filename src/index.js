@@ -24,7 +24,13 @@ const createList = () => {
       checkTodo(selectedId);
     });
 
-}return list};
+  } return list
+};
+
+// const initList = JSON.parse(localStorage.getItem('todoList'));
+// if (initList !== '') {
+//   todoList = initList
+// }
 
 createList();
 

@@ -1,7 +1,1 @@
-export const todoList = [
-  {
-    description: 'Wash Car',
-    completed: false,
-    index: 0,
-  },
-]
+export let todoList = []

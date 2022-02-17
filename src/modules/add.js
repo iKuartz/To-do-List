@@ -12,6 +12,9 @@ export default function addTodo() {
     };
 
     //New element added to the beginning of the list
-    todoList.push(todoObject);
+      todoList.push(todoObject);
+      
+    //   localStorage.setItem('todoList', JSON.stringify(todoList));
   }
 }
+  
