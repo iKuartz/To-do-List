@@ -3,7 +3,7 @@ import "./template.css";
 // Initialize list array
 let todoList = []
 
-export default { todoList };
+export { todoList };
 
 import addTodo from "./modules/add.js"
 import checkTodo from "./modules/check.js"
