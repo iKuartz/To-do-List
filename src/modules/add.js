@@ -2,7 +2,7 @@ import { todoList } from "./refs.js"
 export default function addTodo() {
   const todoText = document.querySelector("#taskInput").value;
 
-  if (todoText == "") {
+  if (todoText === "") {
     alert("Please enter a task");
   } else {
     const todoObject = {
@@ -12,6 +12,6 @@ export default function addTodo() {
     };
 
     //New element added to the beginning of the list
-    todoList.unshift(todoObject);
+    todoList.push(todoObject);
   }
 }
