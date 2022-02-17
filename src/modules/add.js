@@ -1,4 +1,4 @@
-import { todoList } from "./refs.js"
+import { todoList } from "../index.js"
 export default function addTodo() {
   const todoText = document.querySelector("#taskInput").value;
 
@@ -14,7 +14,7 @@ export default function addTodo() {
     //New element added to the beginning of the list
       todoList.push(todoObject);
       
-    //   localStorage.setItem('todoList', JSON.stringify(todoList));
+      localStorage.setItem('todoList', JSON.stringify(todoList));
   }
 }
   

@@ -1,4 +1,4 @@
-import { todoList } from "./refs.js"
+import { todoList } from "../index.js"
 
 export default function checkTodo(selectedId) {
     let check = todoList[selectedId].completed
@@ -9,5 +9,7 @@ export default function checkTodo(selectedId) {
             check = true;
         }
     todoList[selectedId].completed = check
+
+    localStorage.setItem('todoList', JSON.stringify(todoList));
 console.log(todoList)
 }

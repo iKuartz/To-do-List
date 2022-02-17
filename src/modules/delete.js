@@ -1,6 +1,18 @@
-import { todoList } from "./refs.js"
-export default function deleteTodo() {
-    todoList = todoList.filter(function (obj) {
-        return obj.completed !== true;
-    })
+export default function deleteTodo(array) {
+    
+    array = array.filter(obj => {
+        return obj.completed === false;
+    });
+
+    for (let i = 0; i < array.length; i += 1) {
+        array[i].index = i
+        
+
+};
+
+    console.log(array)
+    
+    localStorage.setItem('todoList', JSON.stringify(array));
+
+    return array
 }

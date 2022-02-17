@@ -1,8 +1,9 @@
 import "./template.css";
 
 // Initialize list array
+let todoList = []
 
-import { todoList } from "./modules/refs.js"
+export { todoList };
 
 import addTodo from "./modules/add.js"
 import checkTodo from "./modules/check.js"
@@ -27,10 +28,10 @@ const createList = () => {
   } return list
 };
 
-// const initList = JSON.parse(localStorage.getItem('todoList'));
-// if (initList !== '') {
-//   todoList = initList
-// }
+const initList = JSON.parse(localStorage.getItem('todoList'));
+if (initList !== '') {
+  todoList = initList
+}
 
 createList();
 
@@ -42,9 +43,10 @@ document.querySelector("#taskInput").addEventListener("keydown", function (e) {
 });
 
  
-document.querySelector(".delete-tasks").addEventListener("click", function (e) {
-  deleteTodo()
+document.querySelector(".delete-tasks").addEventListener("click", function (a) {
+  todoList = deleteTodo(todoList)
   createList()
-  console.log(todoList)}
+  console.log(todoList)
+  }
  );
 ;
