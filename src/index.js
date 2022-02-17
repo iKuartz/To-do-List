@@ -1,7 +1,7 @@
 import "./template.css";
 
 // Initialize list array
-let todoList = []
+const todoList = []
 
 export { todoList };
 
@@ -19,7 +19,7 @@ const createList = () => {
   
   var elements = document.getElementsByClassName("checkbox");
 
-    for (var i = 0; i < elements.length; i++) {
+    for (var i = 0; i < elements.length; i=i+1) {
     elements[i].addEventListener('click', function (e) {
   const selectedId = e.target.getAttribute("data-id");
       checkTodo(selectedId);
@@ -36,7 +36,7 @@ if (initList !== '') {
 createList();
 
 document.querySelector("#taskInput").addEventListener("keydown", function (e) {
-  if (e.keyCode == 13) {
+  if (e.keyCode === 13) {
     addTodo()
     createList()
   }
