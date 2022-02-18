@@ -20,11 +20,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: large;
 }
 
 div {
   margin-top: 10vh;
   width: 40vw;
+  min-width: 200px;
 }
 
 h1 {
@@ -35,6 +37,7 @@ h1 {
 #taskInput {
   width: 100%;
   height: 30px;
+  font-size: large;
 }
 
 ul {
@@ -51,4 +54,17 @@ li {
   border: 1px solid;
   margin-top: 1%;
   height: 30px;
+}
+
+.taskEdit {
+  width: 90%;
+  height: 25px;
+  font-size: large;
+}
+
+.delete-tasks {
+  margin-top: 1%;
+  height: 30px;
+  font-size: large;
+  width: 100%;
 }
