@@ -1,7 +1,7 @@
 import './template.css';
 
 import addTodo from './modules/add.js';
-import deleteTodo from './modules/delete.js';
+import deleteTodo from './modules/deleteall.js';
 import createList from './modules/creation.js';
 
 let todoList = [];
