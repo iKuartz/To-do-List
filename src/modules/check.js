@@ -1,15 +1,12 @@
-/* eslint-disable import/no-cycle */
-import todoList from '../index.js';
-
-export default function checkTodo(selectedId) {
-  let check = todoList[selectedId].completed;
+export default function checkTodo(array, selectedId) {
+  let check = array[selectedId].completed;
 
   if (check === true) {
     check = false;
   } else {
     check = true;
   }
-  todoList[selectedId].completed = check;
-
-  localStorage.setItem('todoList', JSON.stringify(todoList));
+  array[selectedId].completed = check;
+  console.log(array);
+  localStorage.setItem('todoList', JSON.stringify(array));
 }

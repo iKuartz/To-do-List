@@ -1,19 +1,16 @@
-/* eslint-disable import/no-cycle */
-import todoList from '../index.js';
-
-export default function addTodo() {
+export default function addTodo(array) {
   const todoText = document.querySelector('#taskInput').value;
 
   if (todoText !== '') {
     const todoObject = {
       description: todoText,
       completed: false,
-      index: todoList.length,
+      index: array.length + 1,
     };
 
     // New element added to the beginning of the list
-    todoList.push(todoObject);
-
-    localStorage.setItem('todoList', JSON.stringify(todoList));
+    array.push(todoObject);
+    console.log(array);
+    localStorage.setItem('todoList', JSON.stringify(array));
   }
 }

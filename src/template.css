@@ -56,6 +56,12 @@ li {
   height: 30px;
 }
 
+.taskEdit {
+  width: 90%;
+  height: 25px;
+  font-size: large;
+}
+
 .delete-tasks {
   margin-top: 1%;
   height: 30px;

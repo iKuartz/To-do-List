@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Awesome Books
+# To-do List
 
-> Pair programming project for week one of module 2 of the Microverse Program.
+> Solo programming project for week one of module 2 of the Microverse Program.
 
 <!-- ![Desktop Version](./images/desktop_version.png)
 ![Mobile Version](./images/mobile.png) -->
