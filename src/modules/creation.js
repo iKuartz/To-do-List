@@ -5,15 +5,21 @@ const list = document.querySelector('.todo-list');
 export default function createList(array) {
   list.innerHTML = '';
   for (let i = 0; i < array.length; i += 1) {
-    list.innerHTML += `<li><input class="checkbox" data-id="${array[i].index}" type="checkbox"><input class= "taskEdit" type="text" value ="${array[i].description}"><i class="fa fa-ellipsis-v" aria-hidden="true" ></i></li>`;
+    list.innerHTML += `<li><input class="checkbox" data-id="${array[i].index}" type="checkbox"><input data-id="${array[i].index}" class= "taskEdit" type="text" value ="${array[i].description}"><i class="fa fa-ellipsis-v" aria-hidden="true" ></i></li>`;
   }
-
   const elements = document.getElementsByClassName('checkbox');
+  const edits = document.getElementsByClassName('taskEdit');
 
+  /* eslint-disable no-plusplus */
   for (let i = 0; i < elements.length; i++) {
     elements[i].addEventListener('click', (e) => {
       const selectedId = e.target.getAttribute('data-id');
       checkTodo(array, selectedId);
+    });
+    edits[i].addEventListener('keyup', (e) => {
+      const selectedId = e.target.getAttribute('data-id');
+      array[selectedId - 1].description = e.target.value;
+      localStorage.setItem('todoList', JSON.stringify(array));
     });
   } return list;
 }

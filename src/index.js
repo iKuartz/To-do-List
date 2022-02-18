@@ -16,11 +16,11 @@ if (initList !== '') {
 document.querySelector('#taskInput').addEventListener('keydown', (e) => {
   if (e.keyCode === 13) {
     addTodo(todoList);
-    createList();
+    createList(todoList);
   }
 });
 
 document.querySelector('.delete-tasks').addEventListener('click', () => {
   todoList = deleteTodo(todoList);
-  createList();
+  createList(todoList);
 });

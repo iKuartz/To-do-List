@@ -1,12 +1,11 @@
 export default function checkTodo(array, selectedId) {
-  let check = array[selectedId].completed;
+  let check = array[selectedId - 1].completed;
 
   if (check === true) {
     check = false;
   } else {
     check = true;
   }
-  array[selectedId].completed = check;
-  console.log(array);
+  array[selectedId - 1].completed = check;
   localStorage.setItem('todoList', JSON.stringify(array));
 }

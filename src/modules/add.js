@@ -10,7 +10,7 @@ export default function addTodo(array) {
 
     // New element added to the beginning of the list
     array.push(todoObject);
-    console.log(array);
+
     localStorage.setItem('todoList', JSON.stringify(array));
   }
 }
