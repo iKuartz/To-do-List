@@ -9,8 +9,8 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: 'index_bundle.js',
-    publicPath: '/to-do-list/',
+    filename: 'main.js',
+    publicPath: '',
   },
   plugins: [new HtmlWebpackPlugin({ template: './src/template.html' })],
   module: {
