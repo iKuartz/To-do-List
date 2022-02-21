@@ -166,7 +166,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ deleteOne)\n/* harmony export */ });\nfunction deleteOne(array, selectedId) {\n  array.splice(selectedId - 1, selectedId);\n  for (let i = 0; i < array.length; i += 1) {\n    array[i].index = i + 1;\n    localStorage.setItem('todoList', JSON.stringify(array));\n  }\n}\n\n//# sourceURL=webpack://to-do-list/./src/modules/deleteone.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ deleteOne)\n/* harmony export */ });\nfunction deleteOne(array, selectedId) {\n  array.splice(selectedId - 1, 1);\n  for (let i = 0; i < array.length; i += 1) {\n    array[i].index = i + 1;\n  }\n  // descriptive comment\n  localStorage.setItem('todoList', JSON.stringify(array));\n}\n\n//# sourceURL=webpack://to-do-list/./src/modules/deleteone.js?");
 
 /***/ })
 
