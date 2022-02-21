@@ -3,7 +3,6 @@ import './template.css';
 import addTodo from './modules/add.js';
 import deleteTodo from './modules/deleteall.js';
 import createList from './modules/creation.js';
-import { isNull } from 'lodash';
 
 let todoList = [];
 
