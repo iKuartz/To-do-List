@@ -8,7 +8,7 @@ import { isNull } from 'lodash';
 let todoList = [];
 
 const initList = JSON.parse(localStorage.getItem('todoList'));
-if (initList !== '' && initList !== isNull) {
+if (initList !== '' && initList !== null) {
   createList(initList);
 } else {
   createList(todoList);
