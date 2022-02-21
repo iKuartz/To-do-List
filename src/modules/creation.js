@@ -3,7 +3,7 @@ import deleteOne from './deleteone.js';
 
 const list = document.querySelector('.todo-list');
 
-export default function createList(array) {
+export default function createList(array = []) {
   list.innerHTML = '';
   for (let i = 0; i < array.length; i += 1) {
     list.innerHTML += `<li><input class="checkbox" data-id="${array[i].index}" type="checkbox"><input data-id="${array[i].index}" class= "taskEdit" type="text" value ="${array[i].description}"><button data-id="${array[i].index}"class="delete-one">Done!</button><i class="fa fa-ellipsis-v" aria-hidden="true" ></i></li>`;
