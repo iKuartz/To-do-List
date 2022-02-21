@@ -7,7 +7,7 @@ import createList from './modules/creation.js';
 let todoList = [];
 
 const initList = JSON.parse(localStorage.getItem('todoList'));
-if (initList !== '') {
+if (initList !== '' && initList !== 'none') {
   createList(initList);
 } else {
   createList(todoList);
