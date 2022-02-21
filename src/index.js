@@ -3,11 +3,12 @@ import './template.css';
 import addTodo from './modules/add.js';
 import deleteTodo from './modules/deleteall.js';
 import createList from './modules/creation.js';
+import { isNull } from 'lodash';
 
 let todoList = [];
 
 const initList = JSON.parse(localStorage.getItem('todoList'));
-if (initList !== '' && initList !== 'none') {
+if (initList !== '' && initList !== isNull) {
   createList(initList);
 } else {
   createList(todoList);
