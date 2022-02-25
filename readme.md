@@ -4,11 +4,14 @@
 
 > Solo programming project for week one of module 2 of the Microverse Program.
 
-<!-- ![Desktop Version](./images/desktop_version.png)
-![Mobile Version](./images/mobile.png) -->
+<!-- ![Desktop Version](./src/imgs/todo-list.png)
+![Mobile Version](./src/imgs/todo-mobile.png) -->
 
 "To-do List" is a simple website that displays a list of books and allows you to add and remove books from that list.
 
+## Live Page
+
+[Page Link](https://ikuartz.github.io/to-do-list/dist/index.html)
 ### First requirements:
 
 
